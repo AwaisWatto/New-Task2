@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Test</h1>
+
+
+<script>
+
+var cats = ['Tom','Fluffy','Tom','Bella','Chloe','Tom','Chloe'];
+var counts = {};
+var compare = 0;
+var mostFrequent;
+(function(array){
+   for(var i = 0, len = array.length; i < len; i++){
+       var word = array[i];
+       
+       if(counts[word] === undefined){
+           counts[word] = 1;
+       }else{
+           counts[word] = counts[word] + 1;
+       }
+       if(counts[word] > compare){
+             compare = counts[word];
+             mostFrequent = cats[i];
+       } 
+    }
+  return mostFrequent;
+})(cats);
+
+document.write(mostFrequent);
+
+
+var arr = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+var mf = 1;
+var m = 0;
+var item;
+
+for (var i = 0; i < arr.length; i++) {
+  for (var j = i; j < arr.length; j++) {
+    if (arr[i] == arr[j]) m++;
+    if (mf < m) {
+      mf = m;
+      item = arr[i];
+    }
+  }
+
+m = 0;
+}
+
+alert(item + " ( " + mf + " times ) ");
+
+</script>
+
+
+
+</body>
+</html>
