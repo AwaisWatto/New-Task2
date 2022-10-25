@@ -6,29 +6,6 @@
 
 <script>
 
-var cats = ['Tom','Fluffy','Tom','Bella','Chloe','Tom','Chloe'];
-var counts = {};
-var compare = 0;
-var mostFrequent;
-(function(array){
-   for(var i = 0, len = array.length; i < len; i++){
-       var word = array[i];
-       
-       if(counts[word] === undefined){
-           counts[word] = 1;
-       }else{
-           counts[word] = counts[word] + 1;
-       }
-       if(counts[word] > compare){
-             compare = counts[word];
-             mostFrequent = cats[i];
-       } 
-    }
-  return mostFrequent;
-})(cats);
-
-document.write(mostFrequent);
-
 
 var arr = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
 var mf = 1;
